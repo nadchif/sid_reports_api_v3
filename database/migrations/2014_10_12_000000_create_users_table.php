@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('category')->default('user');
+            $table->string('category')->default('church');
             $table->string('org_id');
             $table->string('phone', 65);
             $table->string('address', 512);

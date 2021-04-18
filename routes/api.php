@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => '/', 'middleware' => ['jsonify']], function () {
 
-    Route::get('/', 'App\Http\Controllers\v3\ApiStatusController@status');
+    Route::get('/', 'App\Http\Controllers\ApiStatusController@status');
 
     // fallback
 
-    Route::fallback('App\Http\Controllers\v3\@fallback');
+    Route::fallback('App\Http\Controllers\ApiStatusController@fallback');
 });
