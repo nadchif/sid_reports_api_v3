@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"4.9.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"reports_db"},
+{"type":"table","name":"system","database":"reports_db","data":
+[
+{"profile":"default","receiving_email":"admin@domain.com","cc_email":"narencabanlit@gmail.com","log_transactions":"1","user_signup":"1","user_assist":"dchifsolutions@gmail.com","bcc_email":"[\"admin2@domain.com\"]","user_domainrest":"0","user_orderupd":"1"}
+]
+}
+]

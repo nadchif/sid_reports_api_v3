@@ -20,10 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->call(ConferenceSeeder::class);
         $this->call(DistrictSeeder::class);
         $this->call(ChurchSeeder::class);
+        $this->call(UserSeeder::class);
         $this->call(FormSeeder::class);
         $this->call(ResponseSeeder::class);
         $this->call(CommentSeeder::class);
         $this->call(TransferRequestSeeder::class);
-        $this->call(UserSeeder::class);
     }
 }

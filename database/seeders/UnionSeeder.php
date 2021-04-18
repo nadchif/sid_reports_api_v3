@@ -26,6 +26,7 @@ class UnionSeeder extends Seeder
                 $phone = intval($csvData[4]);
                 $code = $csvData[6];
 
+                echo "\nUnion: ".$name;
                 DB::table('unions')->insert([
                     'name' => $name,
                     'division_id'=>1,

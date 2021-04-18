@@ -28,6 +28,8 @@ class ConferenceSeeder extends Seeder
                 $db_union = DB::table('unions')->where('v2id', $old_id)->first();
                 $union_id = $db_union->id;
                 
+                
+                echo "\nConference: ".$name;
                 DB::table('conferences')->insert([
                     'name' => $name,
                     'union_id'=>$union_id,

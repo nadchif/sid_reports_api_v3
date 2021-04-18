@@ -15,6 +15,7 @@ class CreateFormsTable extends Migration
     {
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('v2id')->nullable();
             $table->string('slug', 65);
             $table->string('title', 512);
             $table->string('description', 1024);

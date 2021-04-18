@@ -15,9 +15,9 @@ class CreateUnionsTable extends Migration
     {
         Schema::create('unions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('v2id')->nullable();
             $table->string('name');
             $table->string('code', 65)->unique();
-            $table->unsignedBigInteger('v2id')->nullable();
             $table->unsignedBigInteger('phone');
             $table->string('address', 512);
             $table->foreignId('division_id')->constrained();

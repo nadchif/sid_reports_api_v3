@@ -1,0 +1,88 @@
+[
+    {
+        "type": "header",
+        "version": "4.9.1",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "reports_db"
+    },
+    {
+        "type": "table",
+        "name": "forms",
+        "database": "reports_db",
+        "data": [
+            {
+                "id": "9",
+                "title": "Personal Ministries",
+                "description": "Quarterly Report for Personal Ministries",
+                "access_cycle": "quarter",
+                "access_policy": "user",
+                "limit_conference": "1",
+                "limit_union": "0",
+                "author": "admin",
+                "items": "[{\"type\":\"num\",\"data\":\"Number of Members Involved in Personal Ministries\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"N\\u00famero de membros envolvidos em minist\\u00e9rios pessoais\",\"fr\":\"Nombre de membres impliqu\\u00e9s dans les Minist\\u00e8res Personnels\"}},{\"type\":\"num\",\"data\":\"Lay Crusades and Seminars Conducted\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Evangelismos e semin\\u00e1rios leigos realizados\",\"fr\":\"Campagnes d\\u2019\\u00c9vang\\u00e9lisation et S\\u00e9minaires conduits par les la\\u00efcs\"}},{\"type\":\"num\",\"data\":\"Lay Bible Studies\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Estudos B\\u00edblicos por leigos\",\"fr\":\"\\u00c9tudes bibliques par les la\\u00efcs \"}},{\"type\":\"num\",\"data\":\"Baptisms Resulting from Laymen\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Batismos resultantes do trabalho dos leigos\",\"fr\":\"Bapt\\u00eames obtenus des la\\u00efcs\"}},{\"type\":\"num\",\"data\":\"Pieces of Literature Distributed\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"N\\u00famero de Literatura distribuida\",\"fr\":\"Distribution de mat\\u00e9riels missionnaires\"}},{\"type\":\"num\",\"data\":\"Community Service Unit\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Unidade de Servi\\u00e7o Comunit\\u00e1rio\",\"fr\":\"Unit\\u00e9 des Services Communautaires\"}}]",
+                "url_ref": "H1S6H3P",
+                "created": "2018-12-18 20:50:37",
+                "active": "1"
+            },
+            {
+                "id": "10",
+                "title": "Bible Correspondence School",
+                "description": "Quarterly Report for Bible Correspondence School",
+                "access_cycle": "quarter",
+                "access_policy": "user",
+                "limit_conference": "1",
+                "limit_union": "0",
+                "author": "admin",
+                "items": "[{\"type\":\"num\",\"data\":\"New Enrollments\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Novas inscri\\u00e7\\u00f5es\",\"fr\":\"Nouvelles Inscriptions\"}},{\"type\":\"num\",\"data\":\"Graduates\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Graduados\",\"fr\":\"Dipl\\u00f4m\\u00e9s\"}},{\"type\":\"num\",\"data\":\"Baptisms\",\"options\":{\"required\":true,\"min\":true,\"minval\":\"0\",\"max\":false,\"maxval\":\"1\"},\"translations\":{\"pt\":\"Batismos\",\"fr\":\"Bapt\\u00eames\"}}]",
+                "url_ref": "RM98A6Q",
+                "created": "2018-12-18 21:03:12",
+                "active": "1"
+            },
+            {
+                "id": "16",
+                "title": "Bible Correspondence School",
+                "description": "New Form",
+                "access_cycle": "quarter",
+                "access_policy": "user",
+                "limit_conference": "1",
+                "limit_union": "0",
+                "author": "sangronism@sid.adventist.org",
+                "items": "[{\"type\":\"num\",\"data\":\"New Enrollments\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Graduates\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Baptisms\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"}]",
+                "url_ref": "iF5H367",
+                "created": "2019-03-13 09:09:51",
+                "active": "0"
+            },
+            {
+                "id": "17",
+                "title": "Personal Ministries",
+                "description": "New Form",
+                "access_cycle": "quarter",
+                "access_policy": "user",
+                "limit_conference": "1",
+                "limit_union": "0",
+                "author": "sangronism@sid.adventist.org",
+                "items": "[{\"type\":\"num\",\"data\":\"Number of Members Involved in Personal Ministries\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Lay Campaigns and Seminars Conducted\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Lay Bible Studies\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Baptisms Resulting from Lay Persons\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Pieces of Literature Distributed\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"},{\"type\":\"num\",\"data\":\"Community Service units\",\"options\":\"{\\\"required\\\":true,\\\"min\\\":false,\\\"minval\\\":\\\"0\\\",\\\"max\\\":false,\\\"maxval\\\":\\\"0\\\"}\"}]",
+                "url_ref": "7UHiQSZ",
+                "created": "2019-03-13 09:13:08",
+                "active": "0"
+            },
+            {
+                "id": "19",
+                "title": "Sabbath School",
+                "description": "Revised Sabbath School Electronic Quarterly Report",
+                "access_cycle": "quarter",
+                "access_policy": "user",
+                "limit_conference": "1",
+                "limit_union": "0",
+                "author": "sangronism@sid.adventist.org",
+                "items": "[{\"type\":\"num\",\"data\":\"Total Membership in Sabbath School (This total membership includes adults that are enrolled in the SS Classes as well as all the Children that are in the Children Classes)\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero total de membros da Escola Sabatina (Inclui o total de adultos e crian\\u00e7as inscritas nas classes da Escola Sabatina)\",\"fr\":\"Total des membres de l\\u2019\\u00c9cole du Sabbat (Ce total des membres comprend les adultes inscrits dans les classes de l\\u2019EDS ainsi que tous les enfants de la classe enfantine)\"}},{\"type\":\"num\",\"data\":\"Number of Branch Sabbath Schools\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero de Escolas Sabatinas Filiais\",\"fr\":\"Nombre d\\u2019\\u00c9coles du Sabbat Annexes\"}},{\"type\":\"num\",\"data\":\"Number of members who daily study their lesson (BSG)\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero de membros que estudam a li\\u00e7\\u00e3o da escola sabatina diariamente\",\"fr\":\"Nombre de membres qui \\u00e9tudient quotidiennement la le\\u00e7on de l\\u2019EDS \"}},{\"type\":\"num\",\"data\":\"Number of SS Classes that utilise the SS Record Card\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero de classes da ES que usam o cart\\u00e3o da ES\",\"fr\":\"Nombre de classes de l\\u2019EDS utilisant le registre de l\\u2019EDS \"}},{\"type\":\"num\",\"data\":\"Number of SS Action Units\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero de Unidades Evangelizadoras\",\"fr\":\"Nombre d\\u2019Unit\\u00e9s d\\u2019Action de l\\u2019EDS\"}},{\"type\":\"num\",\"data\":\"Number of members involved in Mission (TMI)\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero de membros envolvidos na miss\\u00e3o (TMI)\",\"fr\":\"Nombre de membres impliqu\\u00e9s dans la Mission (TMI)\"}},{\"type\":\"num\",\"data\":\"Number of Churches that devote time to World mission emphasis (this includes the reading of the mission report,watching the mission spotlight videos and presentation of the local outreach testimonies by members of the church)\",\"options\":{\"required\":true,\"min\":true,\"minval\":0,\"max\":false,\"maxval\":0,\"mcq\":[\"Option 1\",\"Option 2\"]},\"translations\":{\"pt\":\"N\\u00famero de igrejas que dedicam um tempo para a \\u00eanfase na miss\\u00e3o mundial (inclui a leitura do boletim ou carta e exibi\\u00e7\\u00e3o dos v\\u00eddeos mission\\u00e1rios bem como testemunhos evangel\\u00edsticos por membros da igreja local)\",\"fr\":\"Nombre d\\u2019\\u00c9glises qui consacrent du temps \\u00e0 mettre l\\u2019emphase sur la Mission Globale (cela comprend la lecture du rapport missionnaire, la projection vid\\u00e9o du bulletin des missions et la pr\\u00e9sentation des t\\u00e9moignages de l\\u2019\\u00e9vang\\u00e9lisation par les membres de l\\u2019\\u00e9glise locale)\"}}]",
+                "url_ref": "8BLLD2U",
+                "created": "2020-12-10 12:03:09",
+                "active": "1"
+            }
+        ]
+    }
+]

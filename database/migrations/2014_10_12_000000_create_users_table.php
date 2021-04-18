@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('v2id', 255)->nullable();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('category')->default('church');
@@ -23,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('address', 512);
             $table->string('email')->unique();
             $table->unsignedTinyInteger('blocked')->default(0);
+            $table->unsignedTinyInteger('send_notifications')->default(1);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

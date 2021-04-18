@@ -15,10 +15,10 @@ class CreateChurchesTable extends Migration
     {
         Schema::create('churches', function (Blueprint $table) {
             $table->id();            
+            $table->unsignedBigInteger('v2id')->nullable();
             $table->string('name');
             $table->string('phone', 65);
             $table->string('address', 512);
-            $table->string('email');
             $table->foreignId('conference_id')->constrained();
             $table->foreignId('district_id')->constrained();
             $table->timestamps();

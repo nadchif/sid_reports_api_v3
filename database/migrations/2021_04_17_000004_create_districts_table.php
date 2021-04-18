@@ -14,11 +14,11 @@ class CreateDistrictsTable extends Migration
     public function up()
     {
         Schema::create('districts', function (Blueprint $table) {
-            $table->id();           
+            $table->id(); 
+            $table->unsignedBigInteger('v2id')->nullable(); // for compatibility with v3          
             $table->string('name');
             $table->string('phone', 65);
             $table->string('address', 512);
-            $table->string('email');
             $table->foreignId('conference_id')->constrained();
             $table->timestamps();
         });

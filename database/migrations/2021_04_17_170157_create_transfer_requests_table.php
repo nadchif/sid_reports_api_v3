@@ -17,7 +17,7 @@ class CreateTransferRequestsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('target_category')->nullable(false);
-            $table->string('target_org_id')->nullable(false);
+            $table->unsignedBigInteger('target_org_id')->nullable(false);
             $table->timestamps();
         });
     }

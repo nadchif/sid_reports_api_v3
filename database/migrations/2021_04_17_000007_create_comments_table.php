@@ -15,11 +15,13 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            //  $table->unsignedBigInteger('user_id')->nullable(false);
+            $table->unsignedBigInteger('v2id')->nullable(false);
             $table->foreignId('user_id')->constrained();
             $table->foreignId('form_id')->constrained();
             $table->string('period');
-            $table->string('content', 1024);
+            $table->string('level'); // conference / church
+            $table->unsignedBigInteger('org_id');
+            $table->longText('content');
             $table->timestamps();
         });
     }

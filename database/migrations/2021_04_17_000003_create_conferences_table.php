@@ -14,10 +14,10 @@ class CreateConferencesTable extends Migration
     public function up()
     {
         Schema::create('conferences', function (Blueprint $table) {
-            $table->id();            
+            $table->id();  
+            $table->unsignedBigInteger('v2id')->nullable(); // for compatibility with v3          
             $table->string('name');
             $table->string('code', 65);
-            $table->unsignedBigInteger('v2id')->nullable(); // for compatibility with v3
             $table->string('phone', 65);
             $table->string('address', 512);
             $table->foreignId('union_id')->constrained();
