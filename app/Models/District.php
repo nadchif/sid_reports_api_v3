@@ -19,4 +19,18 @@ class District extends Model
     {
         return $this->hasMany(Church::class);
     }
+    public function users(){
+        return $this->hasMany(User::class, 'org_id')->where('category', 'district');
+    }
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'v2id',
+        'updated_at',
+        'created_at',
+        'division_id',
+    ];
 }

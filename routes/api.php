@@ -15,10 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => '/', 'middleware' => ['jsonify']], function () {
-
+    // API status
     Route::get('/', 'App\Http\Controllers\ApiStatusController@status');
 
-    // fallback
+    // Auth
+    Route::post('/auth', 'App\Http\Controllers\AuthController@login');   
 
+    // User
+    Route::middleware('auth:api')->get('user', 'App\Http\Controllers\UserController@index');
+
+
+    // Unions
+    Route::get('/union', 'App\Http\Controllers\UnionController@index');
+    Route::get('/union/{id}', 'App\Http\Controllers\UnionController@get');
+
+    // API fallback
     Route::fallback('App\Http\Controllers\ApiStatusController@fallback');
 });

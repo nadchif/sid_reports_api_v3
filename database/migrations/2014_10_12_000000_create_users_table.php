@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('phone', 65);
             $table->string('address', 512);
             $table->string('email')->unique();
-            $table->unsignedTinyInteger('blocked')->default(0);
+            $table->unsignedTinyInteger('blocked')->default(1);
             $table->unsignedTinyInteger('send_notifications')->default(1);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

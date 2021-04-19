@@ -18,4 +18,18 @@ class Church extends Model
     {
         return $this->belongsTo(Conference::class);
     }
+    public function users(){
+        return $this->hasMany(User::class, 'org_id')->where('category', 'church');
+    }
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'v2id',
+        'updated_at',
+        'created_at',
+        'division_id',
+    ];
 }

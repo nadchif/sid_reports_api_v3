@@ -42,6 +42,8 @@ class ResponseSeeder extends Seeder
                 'item' => $entry['question'],
                 'source' => $category, // conference / church
                 'org_id' => $entry['org_id'],
+                'created_at' => $entry['created'],
+                'updated_at' => $entry['updated'],
                 'data' => $entry['response'],
                 'v2id' => $id
             ]);

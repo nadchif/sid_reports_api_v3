@@ -65,6 +65,7 @@ class UserSeeder extends Seeder
                 'org_id' => $org_id,
                 'phone' => $entry['contactno'],
                 'address' => $entry['contactad'],
+                'blocked' => $entry['blocked'],
                 'send_notifications' => $entry['notis_email'],
                 'email_verified_at' => $entry['verified'] == 1 ? $entry['mod_timestamp'] : null,
                 'password' => $entry['password'],

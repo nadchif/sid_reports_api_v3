@@ -13,4 +13,15 @@ class Division extends Model
     {
         return $this->hasMany(Union::class);
     }
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'v2id',
+        'updated_at',
+        'created_at',
+        'division_id',
+    ];
 }
