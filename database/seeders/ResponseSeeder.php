@@ -15,6 +15,7 @@ class ResponseSeeder extends Seeder
     public function run()
     {
         $entries = json_decode(file_get_contents(__DIR__ . '/responses.json'), 1)[2]['data'];
+        file_put_contents(__DIR__ . '/responses.log', '');
         foreach ($entries as $entry) {
             $id = $entry['id'];
 
@@ -27,7 +28,7 @@ class ResponseSeeder extends Seeder
             $db_user = DB::table('users')->where('email', $author)->first();
             if(!$db_user){
                 echo '\nSKIPPED:'. $entry['user'];
-                file_put_contents(__DIR__ . '/responses.log', (date('Y-m-d H:i:s') . "SKIPPED: ". $entry['user'] . PHP_EOL), FILE_APPEND );
+                file_put_contents(__DIR__ . '/responses.log', (date('Y-m-d H:i:s') . " SKIPPED: ". $entry['user'] . PHP_EOL), FILE_APPEND );
                 continue;
             }
             
