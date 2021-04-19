@@ -21,7 +21,10 @@ class UserController extends Controller
                 $data = User::get();
                 break;
             case 'union':
-                $data = Union::find($currentUser->org_id)->allUsers;
+                $data = Union::find($currentUser->org_id)->allUsers();
+                break;
+            case 'conference':
+                $data = Conference::find($currentUser->org_id)->allUsers();
                 break;
             break;
         }
