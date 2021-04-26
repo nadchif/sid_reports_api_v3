@@ -23,7 +23,8 @@ Route::group(['prefix' => '/', 'middleware' => ['jsonify']], function () {
 
     // User
     Route::middleware('auth:api')->get('user', 'App\Http\Controllers\UserController@index');
-
+    Route::middleware('auth:api')->get('user/{id}', 'App\Http\Controllers\UserController@get');
+    Route::middleware('auth:api')->put('user/{id}', 'App\Http\Controllers\UserController@put');
 
     // Unions
     Route::get('/union', 'App\Http\Controllers\UnionController@index');

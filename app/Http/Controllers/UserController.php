@@ -26,7 +26,12 @@ class UserController extends Controller
             case 'conference':
                 $data = Conference::find($currentUser->org_id)->allUsers();
                 break;
-            break;
+            case 'district':
+                $data = District::find($currentUser->org_id)->allUsers();
+                break;
+            case 'church':
+                $data = [User::find($currentUser->id)];
+                break;
         }
 
         $response_data = [
@@ -40,4 +45,36 @@ class UserController extends Controller
             $data == null ? 404 : 200,
         );
     }
+
+    public function get($id)
+    {
+        $currentUser = Auth::user();
+        $data = null;
+        if (in_array($currentUser->category, ['admin', 'union', 'conference'])) {
+            $data = User::find($id);
+        }
+        $response_data = [
+            'data' => $data != null ? $data : null
+        ];
+        if ($data == null) {
+            $response_data['error'] = 'Could not find requested entry';
+        }
+        return response()->json(
+            $response_data,
+            $data == null ? 404 : 200,
+        );
+    }
+
+    public function put(Request $request,$id)
+    {
+        $currentUser = Auth::user();
+        $request->validate([
+            'email' => 'required_without:token|string',
+            'password' => 'required_without:token|string',
+            'token' => 'required_without:password|string|min:8',
+        ]);
+
+    }
+
+    
 }
