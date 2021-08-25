@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('category')->default('church');
             $table->string('org_id');
-            $table->string('phone', 65);
-            $table->string('address', 512);
+            $table->string('phone', 65)->default('');
+            $table->string('address', 512)->default('');
             $table->string('email')->unique();
             $table->unsignedTinyInteger('blocked')->default(1);
             $table->unsignedTinyInteger('send_notifications')->default(1);

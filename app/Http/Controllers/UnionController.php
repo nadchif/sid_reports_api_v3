@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\VerifyRoles;
 use Illuminate\Http\Request;
 use \App\Models\Union;
 
 class UnionController extends Controller
 {
+    use VerifyRoles;
+
     public function index(Request $request)
     {
         $data = Union::get();
@@ -31,4 +34,30 @@ class UnionController extends Controller
             $data == null ? 404 : 200,
         );
     }
+    public function post(Request $request)
+    {
+        $isAdmin = $this->isAdmin();
+        if($isAdmin !== true){
+            return $isAdmin;
+        };
+        $request->validate([
+            'name' => 'required|min:2|string',
+            'code' => 'required|min:2|string',
+            'address'=> 'required|min:6|string',
+            'phone'=> 'required|digits',
+        ]);
+        $user = Union::create([
+            'email'=>$request->email,
+            'password' => $request->password,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'category' => $request->category,
+            'org_id' => $request->org_id,
+        ]);
+        return response()->json($user, 500);
+
+
+
+    }
+
 }

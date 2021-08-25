@@ -9,7 +9,8 @@ trait VerifyRoles {
         $category = Auth::user()->category;
         if (strtolower($category) !== 'admin') {
             return response()->json(array(
-                'error' => 'Restricted to admins'
+                'error' => 'Restricted to admins',
+                'error_info'=> $category
             ), 403);
         }
         return true;
